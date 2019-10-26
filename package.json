@@ -1,0 +1,24 @@
+{
+  "name": "calendar-nodejs",
+  "version": "1.0.0",
+  "description": "Calendar in Node JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fermartinezm/Calendar-NodeJS.git"
+  },
+  "author": "Fernando Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fermartinezm/Calendar-NodeJS/issues"
+  },
+  "homepage": "https://github.com/fermartinezm/Calendar-NodeJS#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.3"
+  }
+}
