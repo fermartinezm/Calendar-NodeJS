@@ -11,6 +11,8 @@ module.exports =  class GogoleApi{
 		this.startTime = '0';
 		this.endTime = '0';
 	}
+	
+	// Method to read credentials and list the events
 	readEvents(startTime, endTime, callback){
 	  // Vars to get the day/s we want to know the events
 	  this.startTime = startTime;
@@ -26,7 +28,7 @@ module.exports =  class GogoleApi{
 	  });
 	}
 	
-	// Function to read credentials and wait until the event is inserted
+	// Method to read credentials and insert events
 	insertEvent(startTime, endTime, callback){
 		// Set startTime and endTime for the event
 		this.startTime = startTime;
@@ -109,6 +111,7 @@ module.exports =  class GogoleApi{
 	 * Lists the next 10 events on the user's primary calendar.
 	 * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
 	 */
+	// Method to list events
 	listEvents(auth, startTime, endTime, callback) {
 	  var events_list = [];
 	  const calendar = google.calendar({version: 'v3', auth});
@@ -134,7 +137,7 @@ module.exports =  class GogoleApi{
 	  });
 	}
 	
-	// Function to insert the event in Google Calendar
+	// Method to insert the event in Google Calendar
 	createEvents(auth, startTime, endTime, callback){
 		const calendar = google.calendar({version: 'v3', auth});
 		calendar.events.insert({
@@ -155,9 +158,6 @@ module.exports =  class GogoleApi{
 				console.log('There was an error contacting the Calendar service: ' + err);
 				return;
 			}
-			// Vars
-			var sTime = startTime;
-			var eTime = endTime;
 			console.log('Event created: %s', event.data.htmlLink);
 			return callback('Error', event.data.htmlLink);
 		});
