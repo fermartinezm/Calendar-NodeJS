@@ -1,8 +1,9 @@
 const dotenv = require('dotenv');
 dotenv.config();
 module.exports = {
-  port: process.env.PORT,
-  url: process.env.MONGO_URL,
-  db_name: process.env.MONGO_DBNAME,
-  col_name: process.env.MONGO_COLNAME
+  PORT: process.env.PORT,
+  SCOPES_URL: process.env.SCOPES_URL,
+  TOKEN_PATH: process.env.TOKEN_PATH,
+  TIMEZONE: process.env.TIMEZONE,
+  CALENDARID: process.env.CALENDARID
 };
